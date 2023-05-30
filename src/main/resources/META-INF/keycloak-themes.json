@@ -1,0 +1,6 @@
+{
+  "themes": [{
+    "name" : "bimany-login",
+    "types": [ "login" ]
+  }]
+}
