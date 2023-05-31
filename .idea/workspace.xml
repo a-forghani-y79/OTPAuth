@@ -4,19 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b46fcec9-27eb-410c-a705-0a6adf1c241b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/atlas/bimany/keycloak/authenticator/OTPAuthenticator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/atlas/bimany/keycloak/authenticator/OTPAuthenticatorContstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/atlas/bimany/keycloak/authenticator/OTPAuthenticatorFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/atlas/bimany/keycloak/authenticator/OTPAuthenticatorUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/keycloak-themes.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/services/org.keycloak.authentication.AuthenticatorFactory" afterDir="false" />
+    <list default="true" id="b46fcec9-27eb-410c-a705-0a6adf1c241b" name="Changes" comment="init">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/atlas/bimany/keycloak/authenticator/OTPLoginFormConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/atlas/bimany/keycloak/authenticator/PhoneNumberForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/atlas/bimany/keycloak/authenticator/PhoneNumberFormFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/theme/bimany-login/login/template.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/atlas/bimany/keycloak/authenticator/OTPAuthenticator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/atlas/bimany/keycloak/authenticator/OTPAuthenticator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/atlas/bimany/keycloak/authenticator/OTPAuthenticatorContstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/atlas/bimany/keycloak/authenticator/OTPAuthenticatorContstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/atlas/bimany/keycloak/authenticator/OTPAuthenticatorFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/atlas/bimany/keycloak/authenticator/OTPAuthenticatorFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/atlas/bimany/keycloak/authenticator/OTPAuthenticatorUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/atlas/bimany/keycloak/authenticator/OTPAuthenticatorUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/services/org.keycloak.authentication.AuthenticatorFactory" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/services/org.keycloak.authentication.AuthenticatorFactory" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +25,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -39,23 +38,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Administrator/Desktop/keycloak-addons/keycloak-otp-authenticator/src&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Administrator/Desktop/keycloak-addons/keycloak-otp-authenticator/src/main/java/ir/atlas/bimany/keycloak/authenticator",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\keycloak-addons\keycloak-otp-authenticator\src\main\java\ir\atlas\bimany\keycloak\authenticator" />
+      <recent name="C:\Users\Administrator\Desktop\keycloak-addons\keycloak-otp-authenticator\src\main\resources\theme\bimany-login\login" />
       <recent name="C:\Users\Administrator\Desktop\keycloak-addons\keycloak-otp-authenticator\src" />
       <recent name="C:\Users\Administrator\Desktop\keycloak-addons\keycloak-otp-authenticator" />
       <recent name="C:\Users\Administrator\Desktop\keycloak-addons\keycloak-otp-authenticator\templates" />
@@ -100,10 +101,24 @@
       <option name="presentableId" value="Default" />
       <updated>1685438740630</updated>
       <workItem from="1685438741679" duration="6208000" />
+      <workItem from="1685452206139" duration="92000" />
+      <workItem from="1685509405840" duration="19933000" />
     </task>
+    <task id="LOCAL-00001" summary="init">
+      <created>1685452213672</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1685452213672</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
   </component>
 </project>
