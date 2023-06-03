@@ -4,16 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b46fcec9-27eb-410c-a705-0a6adf1c241b" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/atlas/bimany/keycloak/authenticator/OTPLoginFormConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/atlas/bimany/keycloak/authenticator/PhoneNumberForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/atlas/bimany/keycloak/authenticator/PhoneNumberFormFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/theme/bimany-login/login/template.ftl" afterDir="false" />
+    <list default="true" id="b46fcec9-27eb-410c-a705-0a6adf1c241b" name="Changes" comment="init-0">
+      <change afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/theme/bimany-login/login/bimany-otp-error.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/theme/bimany-login/login/bimany-otp.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ir/atlas/bimany/keycloak/authenticator/OTPAuthenticator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/atlas/bimany/keycloak/authenticator/OTPAuthenticator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ir/atlas/bimany/keycloak/authenticator/OTPAuthenticatorContstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/atlas/bimany/keycloak/authenticator/OTPAuthenticatorContstants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ir/atlas/bimany/keycloak/authenticator/OTPAuthenticatorFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/atlas/bimany/keycloak/authenticator/OTPAuthenticatorFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ir/atlas/bimany/keycloak/authenticator/OTPAuthenticatorUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/atlas/bimany/keycloak/authenticator/OTPAuthenticatorUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/atlas/bimany/keycloak/authenticator/OTPLoginFormConstants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/atlas/bimany/keycloak/authenticator/PhoneNumberForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/atlas/bimany/keycloak/authenticator/PhoneNumberForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/atlas/bimany/keycloak/authenticator/PhoneNumberFormFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/atlas/bimany/keycloak/authenticator/PhoneNumberFormFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/services/org.keycloak.authentication.AuthenticatorFactory" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/services/org.keycloak.authentication.AuthenticatorFactory" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,6 +48,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/Users/Administrator/Desktop/keycloak-addons/keycloak-otp-authenticator/src/main/java/ir/atlas/bimany/keycloak/authenticator",
     "list.type.of.created.stylesheet": "CSS",
@@ -50,7 +57,17 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "settings.gerrit",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql",
+      "mysql"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -102,7 +119,10 @@
       <updated>1685438740630</updated>
       <workItem from="1685438741679" duration="6208000" />
       <workItem from="1685452206139" duration="92000" />
-      <workItem from="1685509405840" duration="19933000" />
+      <workItem from="1685509405840" duration="20069000" />
+      <workItem from="1685768192321" duration="1251000" />
+      <workItem from="1685769461472" duration="1165000" />
+      <workItem from="1685770669193" duration="14376000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1685452213672</created>
@@ -111,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685452213672</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="init-0">
+      <created>1685538078324</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1685538078324</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,6 +146,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="init-0" />
+    <option name="LAST_COMMIT_MESSAGE" value="init-0" />
   </component>
 </project>

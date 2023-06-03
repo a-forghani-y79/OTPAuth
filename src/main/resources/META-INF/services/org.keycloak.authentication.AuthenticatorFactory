@@ -1,1 +1,2 @@
 ir.atlas.bimany.keycloak.authenticator.PhoneNumberFormFactory
+ir.atlas.bimany.keycloak.authenticator.OTPAuthenticatorFactory
