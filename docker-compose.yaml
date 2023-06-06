@@ -1,0 +1,32 @@
+version: "3.8"
+services:
+  keycloak:
+    build: .
+    container_name: keycloak
+    depends_on:
+      - db
+    environment:
+      - ENV KC_DB=kc_db
+      - ENV KC_DB_URL=jdbc:postgresql://db:5432/kc_db
+      - ENV KC_DB_USERNAME=root
+      - ENV KC_DB_PASSWORD=root
+      - KEYCLOAK_ADMIN=admin
+      - KEYCLOAK_ADMIN_PASSWORD=admin
+    ports:
+      - "8080:8080"
+  db:
+    image: bitnami/postgresql:14.8.0
+    container_name: postgres
+    restart: unless-stopped
+    environment:
+     - POSTGRES_USER=root
+     - POSTGRES_PASSWORD=root
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+networks:
+  keycloak_network:
+volumes:
+  postgres_data:
+  keycloak_data:

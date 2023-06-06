@@ -1,11 +1,5 @@
 package ir.atlas.bimany.keycloak.authenticator;
 
-import org.apache.http.StatusLine;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.utils.URIBuilder;
-import org.apache.http.impl.client.HttpClients;
 import org.jboss.logging.Logger;
 import org.keycloak.authentication.AuthenticationFlowContext;
 import org.keycloak.authentication.AuthenticationFlowError;
@@ -14,14 +8,11 @@ import org.keycloak.models.*;
 
 import javax.ws.rs.core.MultivaluedMap;
 import javax.ws.rs.core.Response;
-import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.util.Date;
 import java.util.Random;
 
 public class OTPAuthenticator implements Authenticator {
-    private static Logger logger = Logger.getLogger(OTPAuthenticator.class);
+    private static final Logger logger = Logger.getLogger(OTPAuthenticator.class);
 
     private static enum CODE_STATUS {
         VALID,
@@ -40,7 +31,7 @@ public class OTPAuthenticator implements Authenticator {
             return;
         }
         String mobileNumber = OTPAuthenticatorUtil.getAttributeValue(context.getUser(), mobileNumberAttribute);
-        if (mobileNumber != null && mobileNumber != "") {
+        if (mobileNumber != null && !mobileNumber.equals("")) {
             long nrOfDigits = OTPAuthenticatorUtil.getConfigLong(config, OTPAuthenticatorContstants.CONF_PRP_SMS_CODE_LENGTH, 8L);
             long ttl = OTPAuthenticatorUtil.getConfigLong(config, OTPAuthenticatorContstants.CONF_PRP_SMS_CODE_TTL, 10 * 60L); // 10 minutes in s
 
@@ -117,43 +108,6 @@ public class OTPAuthenticator implements Authenticator {
         logger.warn("OTPAuthenticator.sendSmsCode");
         logger.warn("mobileNumber = " + mobileNumber + ", code = " + code + ", config = " + config);
         return true;
-//        String smsScheme = OTPAuthenticatorUtil.getConfigString(config, OTPAuthenticatorContstants.SMS_SCHEME);
-//        String smsHost = OTPAuthenticatorUtil.getConfigString(config, OTPAuthenticatorContstants.SMS_HOST);
-//        String smsPath = OTPAuthenticatorUtil.getConfigString(config, OTPAuthenticatorContstants.SMS_PATH);
-//        String smsUsername = OTPAuthenticatorUtil.getConfigString(config, OTPAuthenticatorContstants.SMS_USERNAME);
-//        String smsPassword = OTPAuthenticatorUtil.getConfigString(config, OTPAuthenticatorContstants.SMS_PASSWORD);
-//        String smsFrom = OTPAuthenticatorUtil.getConfigString(config, OTPAuthenticatorContstants.SMS_FROM);
-//        String smsToPrefix = OTPAuthenticatorUtil.getConfigString(config, OTPAuthenticatorContstants.SMS_TO_PREFIX);
-//        String smsText = OTPAuthenticatorUtil.getConfigString(config, OTPAuthenticatorContstants.SMS_TEXT);
-
-//        logger.debug(smsText + " " + code);
-//
-//        try {
-//
-//            URIBuilder builder = new URIBuilder();
-//            builder.setScheme(smsScheme).setHost(smsHost).setPath(smsPath)
-//                    .setParameter("Username", smsUsername)
-//                    .setParameter("Password", smsPassword)
-//                    .setParameter("From", smsFrom)
-//                    .setParameter("To", smsToPrefix + mobileNumber)
-//                    .setParameter("Message", smsText + " " + code);
-//            URI uri = builder.build();
-//            HttpGet httpget = new HttpGet(uri);
-//            System.out.println(httpget.getURI());
-//
-//            HttpClient httpClient = HttpClients.createDefault();
-//            CloseableHttpResponse response = (CloseableHttpResponse) httpClient.execute(httpget);
-//            System.out.println(response.toString());
-//            StatusLine sl = response.getStatusLine();
-//            response.close();
-//            if (sl.getStatusCode() != 200) {
-//                logger.error("SMS code for " + mobileNumber + " could not be sent: " + sl.getStatusCode() + " - " + sl.getReasonPhrase());
-//            }
-//            return sl.getStatusCode() == 200;
-//        } catch (IOException | URISyntaxException e) {
-//            logger.error("sendSms called ... SecretQuestionAuthenticator" + e);
-//            return false;
-//        }
     }
 
     private String getSmsCode(long nrOfDigits) {
